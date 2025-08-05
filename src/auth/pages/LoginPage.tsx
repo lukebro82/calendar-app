@@ -16,6 +16,7 @@ const resgisterFormField = {
 
 export const LoginPage = () => {
   const { startLogin, errorMessage, startRegisterUser } = useAuthStore();
+  console.log(errorMessage);
 
   const {
     loginEmail,
@@ -48,12 +49,12 @@ export const LoginPage = () => {
       password: registerPassword,
     });
   };
-
   useEffect(() => {
-    if (errorMessage !== undefined || errorMessage !== null)
-      Swal.fire("Error", errorMessage, "error");
+    if (errorMessage !== null) {
+      console.log(errorMessage);
+      Swal.fire("Error en la autenticación", errorMessage, "error");
+    }
   }, [errorMessage]);
-
   return (
     <div className="container login-container">
       <div className="row">
