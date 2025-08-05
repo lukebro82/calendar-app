@@ -50,7 +50,8 @@ export const LoginPage = () => {
   };
 
   useEffect(() => {
-    if (errorMessage !== undefined) Swal.fire("Error", errorMessage, "error");
+    if (errorMessage !== undefined || errorMessage !== null)
+      Swal.fire("Error", errorMessage, "error");
   }, [errorMessage]);
 
   return (
