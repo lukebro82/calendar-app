@@ -16,7 +16,6 @@ const resgisterFormField = {
 
 export const LoginPage = () => {
   const { startLogin, errorMessage, startRegisterUser } = useAuthStore();
-  console.log(errorMessage);
 
   const {
     loginEmail,
@@ -51,7 +50,6 @@ export const LoginPage = () => {
   };
   useEffect(() => {
     if (errorMessage !== null) {
-      console.log(errorMessage);
       Swal.fire("Error en la autenticación", errorMessage, "error");
     }
   }, [errorMessage]);
