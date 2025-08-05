@@ -1,6 +1,6 @@
 import { useEffect, type FormEvent } from "react";
 import { useAuthStore, useForm } from "../../hooks";
-import "./loginPage.css";
+import "./LoginPage.css";
 import Swal from "sweetalert2";
 
 const loginFormField = {
